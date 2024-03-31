@@ -9,7 +9,6 @@ import { Button } from '@hilla/react-components/Button';
 export default function TaskView() {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [selectedTask, setSelectedTask] = useState<Task | undefined | null>(undefined);
-  const [formOpen, setFormOpen] = useState(false);
 
   useEffect(() => {
     TaskService.getAllTasks().then(setTasks)

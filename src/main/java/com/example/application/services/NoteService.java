@@ -24,4 +24,8 @@ public class NoteService {
     public Note addNote(Note note) {
         return noteRepository.save(note);
     }
+
+    public void deleteNote(Note note) {
+        noteRepository.deleteById(note.getId());
+    }
 }

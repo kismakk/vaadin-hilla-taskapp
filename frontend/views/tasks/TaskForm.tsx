@@ -11,8 +11,9 @@ interface TaskFormProps {
   onSubmit: (task: Task) => Promise<void>
   onDelete: (task: Task) => Promise<void>
 }
+
 export default function TaskForm({task, onSubmit, onDelete}: TaskFormProps) {
-  const {field, model, submit, read, reset, invalid } = useForm(TaskModel, { onSubmit })
+  const {field, model, submit, read, invalid } = useForm(TaskModel, { onSubmit })
 
   useEffect(() => {
     read(task)
